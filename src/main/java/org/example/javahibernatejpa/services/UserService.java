@@ -1,5 +1,6 @@
 package org.example.javahibernatejpa.services;
 
+import lombok.RequiredArgsConstructor;
 import org.example.javahibernatejpa.entities.User;
 import org.example.javahibernatejpa.repositories.UserRepository;
 import org.springframework.stereotype.Service;
@@ -7,9 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public User createUser(User user) {
         return userRepository.save(user);
@@ -21,10 +23,6 @@ public class UserService {
 
     public User getUserById(String id) {
         return userRepository.findById(id).orElse(null);
-    }
-
-    public User updateUser(User updatedUser) {
-        return userRepository.save(updatedUser);
     }
 
     public void deleteUser(String id) {

@@ -1,16 +1,18 @@
 package org.example.javahibernatejpa.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.With;
 
 @Entity
 @Table(name = "users")
+@Data
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    String id;
 
-    private String firstName;
-    private String lastName;
+    String firstName;
+    String lastName;
 
 }
