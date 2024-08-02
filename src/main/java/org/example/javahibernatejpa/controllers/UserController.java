@@ -2,9 +2,7 @@ package org.example.javahibernatejpa.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.example.javahibernatejpa.entities.User;
-import org.example.javahibernatejpa.repositories.UserRepository;
 import org.example.javahibernatejpa.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -2,7 +2,6 @@ package org.example.javahibernatejpa.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.With;
 
 @Entity
 @Table(name = "users")
@@ -12,7 +11,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     String id;
 
+    @Column(name = "first_name")
     String firstName;
-    String lastName;
 
+    @Column(name = "last_name")
+    String lastName;
 }
